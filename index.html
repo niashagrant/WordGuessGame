@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can you guess correctly?</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3ed87a7545.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="assets/javascript/game.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid title">
+      <div class="container">
+        <h1 class="display-2">
+          Guess that dessert!
+          <i class="fas fa-ice-cream 2x"></i>
+        </h1>
+      </div>
+    </div>
+
+    <div class="container" id="instructions" style="display: block;">
+      <div class="jumbotron body">
+        <h1 class="display-4">How to play!</h1>
+        <p class="lead">
+          Follow the instructions below to guess the correct sweet treat!
+        </p>
+        <hr class="my-4" />
+
+        <h4>To play the game:</h4>
+        <ul>
+          <li>Click "Start Game"</li>
+          <li>Once game has started use keyboard to select letters</li>
+          <li>
+            Keep selecting letters until you have guessed the correct dessert or
+            until you have used all guesses
+          </li>
+          <li>Make sure to have fun! <i class="far fa-smile-beam"></i></li>
+        </ul>
+        <a class="btn btn-info btn-med" href="#" role="button" id="showGamePage"
+          >Start Game</a
+        >
+      </div>
+    </div>
+
+    <div class="container" id="playGame" style="display: block;">
+      <div class="jumbotron body">
+        <h1 class="display-4">Which dessert am I?</h1>
+        <p class="lead">
+          Use keyboard to guess the correct sweet treat!
+        </p>
+        <hr class="my-4" />
+
+        <h4>To play the game:</h4>
+        <ul>
+          <li>Hit "Start Game"</li>
+          <li>Once game has started use keyboard to select letters</li>
+          <li>
+            Keep selecting letters until you have guessed the correct dessert or
+            until you have used all guesses
+          </li>
+          <li>Make sure to have fun! <i class="far fa-smile-beam"></i></li>
+        </ul>
+        <a
+          class="btn btn-info btn-med"
+          href="#"
+          role="button"
+          id="showInstructions"
+          >Play Again?</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

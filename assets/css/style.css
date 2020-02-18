@@ -1,0 +1,20 @@
+body {
+  background-image: url(https://i.ya-webdesign.com/images/transparent-sprinkles-background-tumblr-6.png);
+  background-color: lightpink;
+}
+
+.title {
+  background-color: lightblue;
+}
+
+.title h1 {
+  color: white;
+}
+
+.body h1 {
+  color: lightblue;
+}
+
+.body {
+  background-color: whitesmoke;
+}

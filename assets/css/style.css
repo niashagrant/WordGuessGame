@@ -18,3 +18,31 @@ body {
 .body {
   background-color: whitesmoke;
 }
+
+/* .letter {
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  padding: 2px;
+  float: left;
+  margin: 2px;
+}
+
+.letter-button-color {
+  color: darkcyan;
+}
+
+.fridge-color {
+  color: orange;
+}
+
+#display {
+  margin-top: 78px;
+  height: 500px;
+  width: 220px;
+  margin-left: 60px;
+} */
+
+#refresh {
+  margin-top: 0.5rem;
+}

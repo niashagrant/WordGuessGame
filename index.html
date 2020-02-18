@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="container" id="instructions" style="display: block;">
+    <div class="container" id="instructions">
       <div class="jumbotron body">
         <h1 class="display-4">How to play!</h1>
         <p class="lead">
@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <div class="container" id="playGame" style="display: block;">
+    <div class="container" id="playGame" style="display: none;">
       <div class="jumbotron body">
         <h1 class="display-4">Which dessert am I?</h1>
         <p class="lead">
@@ -61,20 +61,10 @@
         <hr class="my-4" />
 
         <h4>To play the game:</h4>
-        <ul>
-          <li>Hit "Start Game"</li>
-          <li>Once game has started use keyboard to select letters</li>
-          <li>
-            Keep selecting letters until you have guessed the correct dessert or
-            until you have used all guesses
-          </li>
-          <li>Make sure to have fun! <i class="far fa-smile-beam"></i></li>
-        </ul>
-        <a
-          class="btn btn-info btn-med"
-          href="#"
-          role="button"
-          id="showInstructions"
+        <div id="display"></div>
+        <div id="buttons"></div>
+
+        <a class="btn btn-info btn-med" href="#" role="button" id="refresh"
           >Play Again?</a
         >
       </div>

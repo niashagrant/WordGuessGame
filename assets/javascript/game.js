@@ -25,8 +25,9 @@ var dessertWordBank = [
 var word = [];
 var wrongGuess = [];
 var rightGuess = [];
-// var i = 1;
-// var y = 0;
+var playing = false;
+var triedLetters = [];
+var score = 0;
 
 var letters = [
   "A",
@@ -85,21 +86,27 @@ $(document).ready(function() {
     if (index === -1) {
       wrongGuess.push(space);
       var wrong = wrongGuess.length;
+      console.log("wrong" + wrong);
+      $(".wrongLetters tbody tr td:nth-of-type(" + wrong + ")").text(space);
     }
   }
+  play();
 
-  for (i = 0; i < letters.length; i++) {
-    var letterBtn = $("<button>");
-    letterBtn.addClass(" letter-button letter letter-button-color");
-    letterBtn.attr("data-letter", letters[i]);
-    letterBtn.text(letters[i]);
-    $("#buttons").append(letterBtn);
-  }
+  //   function letter() {
+  //     for (i = 0; i < letters.length; i++) {
+  //       var letterBtn = $("<button>");
+  //       letterBtn.addClass(" letter-button letter letter-button-color");
+  //       letterBtn.attr("data-letter", letters[i]);
+  //       letterBtn.text(letters[i]);
+  //       $("#buttons").append(letterBtn);
+  //     }
 
-  $(".letter-button").on("click", function() {
-    var fridgeMagnet = $("<div>");
-    fridgeMagnet.addClass("letter fridge-color");
-    fridgeMagnet.text($(this).attr("data-letter"));
-    $("#display").append(fridgeMagnet);
-  });
+  //     $(".letter-button").on("click", function() {
+  //       var fridgeMagnet = $("<div>");
+  //       fridgeMagnet.addClass("letter fridge-color");
+  //       fridgeMagnet.text($(this).attr("data-letter"));
+  //       $("#display").append(fridgeMagnet);
+  //     });
+  //   }
+  //   letter();
 });

@@ -19,43 +19,37 @@ body {
   background-color: whitesmoke;
 }
 
-/* .letter {
+.letter {
   width: 30px;
   height: 30px;
   border-style: solid;
   padding: 2px;
   float: left;
   margin: 2px;
-} */
+}
 
 .letter-button-color {
   color: darkcyan;
 }
 
-.fridge-color {
-  color: orange;
-}
-
-/* #display {
-  margin-top: 78px;
-  height: 500px;
-  width: 220px;
-  margin-left: 60px;
-} */
-
 #refresh {
-}
-
-#displayLetters {
-  /* letter-spacing: 15px; */
-  /* text-decoration: underline; */
+  margin-top: 10%;
 }
 
 h5 ul li {
   display: inline;
   letter-spacing: 10px;
+  border-style: solid;
+  padding-left: 2px;
+  margin: 2px;
+  text-align: center;
 }
 
 h5 li {
   border: lightblue 1px solid;
+}
+
+.form-control {
+  width: 10ch;
+  text-align: center;
 }

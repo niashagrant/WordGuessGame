@@ -1,4 +1,4 @@
-var dessertWordBank = [
+var word = [
   "cake",
   "cinnamon roll",
   "cookie",
@@ -22,91 +22,61 @@ var dessertWordBank = [
   "meringue"
 ];
 
-var word = [];
-var wrongGuess = [];
-var rightGuess = [];
-var playing = false;
-var triedLetters = [];
-var score = 0;
+var randomWord = Math.floor(Math.random() * word.length);
+var choosenWord = word[randomWord];
+var rightLetter = [];
+var wrongLetter = [];
+var underScore = [];
 
-var letters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-  "_"
-];
+let displayUnderScore = document.getElementsByClassName("underScore");
+let displayRightGuess = document.getElementsByClassName("rightGuess");
+let displayWrongGuess = document.getElementsByClassName("wrongGuess");
 
+// create the underscores based on the length of the randomly selected word
+console.log(choosenWord);
 $(document).ready(function() {
+  // showing the next div
   $("#showGamePage").click(function() {
     $("#instructions").hide();
     $("#playGame").show();
   });
 
-  function randomWord() {
-    var random = Math.floor(Math.random() * dessertWordBank.length);
-    var toString = dessertWordBank[random];
-    console.log(toString);
-    word = toString.split("");
-    console.log(word);
-  }
-  randomWord();
-
-  function wordSpaces() {
-    for (var i = 0; i < word.length; i++) {
-      $("#displayLetters").append("<li>" + word[i] + "</li>");
+  let generateUnderscore = function() {
+    for (let i = 0; i < choosenWord.length; i++) {
+      underScore.push("_");
     }
-  }
-  wordSpaces();
+    return underScore;
+  };
+  generateUnderscore();
 
-  function play(space) {
-    var index = jQuery.inArray(space, word);
-    if (index === -1) {
-      wrongGuess.push(space);
-      var wrong = wrongGuess.length;
-      console.log("wrong" + wrong);
-      $(".wrongLetters tbody tr td:nth-of-type(" + wrong + ")").text(space);
+  // getting the users guess
+  $(document).on("keypress", function() {
+    let keyword = String.fromCharCode(event.keyCode);
+
+    // if users guess is right
+    if (choosenWord.indexOf(keyword) > -1) {
+      // add to right words array
+      rightLetter.push(keyword);
+
+      // replace underscore with letter
+      underScore[choosenWord.indexOf(keyword)] = keyword;
+      displayUnderScore[0].innerHTML = underScore.join(" ");
+      displayRightGuess[0].innerHTML = rightLetter;
+
+      // check to see if the letter is what the user guessed
+      if (underScore.join("") === choosenWord) {
+        alert("You win!");
+      }
     }
-  }
-  play();
+    // add to wrong words array
+    else {
+      displayUnderScore[0].innerHTML = underScore.join(" ");
+      wrongLetter.push(keyword);
+      displayWrongGuess[0].innerHTML = wrongLetter;
+    }
+  });
 
-  //   function letter() {
-  //     for (i = 0; i < letters.length; i++) {
-  //       var letterBtn = $("<button>");
-  //       letterBtn.addClass(" letter-button letter letter-button-color");
-  //       letterBtn.attr("data-letter", letters[i]);
-  //       letterBtn.text(letters[i]);
-  //       $("#buttons").append(letterBtn);
-  //     }
-
-  //     $(".letter-button").on("click", function() {
-  //       var fridgeMagnet = $("<div>");
-  //       fridgeMagnet.addClass("letter fridge-color");
-  //       fridgeMagnet.text($(this).attr("data-letter"));
-  //       $("#display").append(fridgeMagnet);
-  //     });
-  //   }
-  //   letter();
+  $("#refresh").click(function() {
+    location.reload();
+  });
 });

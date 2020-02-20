@@ -39,10 +39,9 @@
         <h4>To play the game:</h4>
         <ul>
           <li>Click "Start Game"</li>
-          <li>Once game has started use mouse to select letters</li>
+          <li>Once game has started use keyboard to select letters</li>
           <li>
-            Keep selecting letters until you have guessed the correct dessert or
-            until you have used all guesses
+            Keep selecting letters until you have guessed the correct dessert!
           </li>
           <li>Make sure to have fun! <i class="far fa-smile-beam"></i></li>
         </ul>
@@ -52,58 +51,58 @@
       </div>
     </div>
 
-    <div class="container" id="playGame" style="display: none;">
+    <div class="container" id="playGame">
       <div class="jumbotron body">
         <h1 class="display-4">Which dessert am I?</h1>
         <p class="lead">
-          Use mouse to guess the correct sweet treat!
+          Hit a key on keyboard to see spaces to guess the correct sweet treat!
         </p>
         <hr class="my-4" />
 
         <h4>Your Word:</h4>
 
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title mx-auto"><ul id="displayLetters"></ul></h5>
-            <div></div>
+        <div class="card border-info mb-3 ">
+          <div
+            class="card-header display-3 text-center underScore"
+            id="underScores"
+          ></div>
+          <div class="card-body text-info">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="card border-info mb-3 text-center">
+                    <div class="card-header">
+                      Right Letters
+                      <img src="assets/images/candy.png" alt="" />
+                    </div>
+                    <div class="card-body text-info">
+                      <h5 class="card-title rightGuess"></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card border-info mb-3 text-center">
+                    <div class="card-header">
+                      Wrong Letters
+                      <img src="assets/images/sugar.png" alt="" />
+                    </div>
+                    <div class="card-body text-info">
+                      <h5 class="card-title wrongGuess"></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                class="btn btn-info btn-med"
+                href="#"
+                role="button"
+                id="refresh"
+                >Play Again?</a
+              >
+            </div>
           </div>
         </div>
-
-        <fieldset class="guessIn">
-          <!-- <label for="form"
-                  >Type a Letter then Click <kbd>Enter</kbd></label
-                > -->
-          <input
-            type="text"
-            id="form"
-            class="form-control mx-auto"
-            placeholder="guess"
-          />
-        </fieldset>
-
-        <table class="wrongLetters">
-          <thead>
-            Letters Guessed Wrong:
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        <div id="buttons"></div>
-        <a class="btn btn-info btn-med" href="#" role="button" id="refresh"
-          >Play Again?</a
-        >
       </div>
     </div>
   </body>

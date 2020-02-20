@@ -19,37 +19,30 @@ body {
   background-color: whitesmoke;
 }
 
-.letter {
-  width: 30px;
-  height: 30px;
-  border-style: solid;
-  padding: 2px;
-  float: left;
-  margin: 2px;
-}
-
-.letter-button-color {
-  color: darkcyan;
+#playGame {
+  display: none;
 }
 
 #refresh {
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
-h5 ul li {
-  display: inline;
-  letter-spacing: 10px;
-  border-style: solid;
-  padding-left: 2px;
-  margin: 2px;
+#underScore {
+  height: 50%;
+  border: pink 1px solid;
+}
+
+.underscore {
+  border: 1px dashed rgb(24, 162, 184);
+
   text-align: center;
+  margin: 50px auto;
+  height: 150px;
+  width: 80%;
 }
 
-h5 li {
-  border: lightblue 1px solid;
-}
-
-.form-control {
-  width: 10ch;
-  text-align: center;
+img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
 }
